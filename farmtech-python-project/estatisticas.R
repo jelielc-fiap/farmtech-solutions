@@ -1,4 +1,10 @@
+# Caso não tenha a biblioteca Jsonlite instalada descomente o coméntário abaixo
+#install.packages("jsonlite")
+
 library(jsonlite)
+
+# Limpar ambiente 
+rm(list = ls())
 
 # 1. Carregamento dos dados
 arquivo <- "dados_farmtech.json" 
@@ -74,3 +80,4 @@ cat("Insumos Totais:     ", sum(insumos_gerais), "L\n")
 cat("======================================================================\n")
 
 cat(">> Analise estatistica concluida com sucesso!\n\n")
+
