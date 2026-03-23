@@ -324,7 +324,7 @@ def deletar_dados():
 
 def exportar_json():
     agora = datetime.now()
-    nome_arquivo = agora.strftime("dados_farmtech.json")
+    nome_arquivo = agora.strftime("farmtech-python-project/dados_farmtech.json")
 
     with open(nome_arquivo, "w", encoding="utf-8") as arquivo:
         json.dump(cadastros, arquivo, indent=4, ensure_ascii=False)
