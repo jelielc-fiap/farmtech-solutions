@@ -1,0 +1,46 @@
+[
+    {
+        "responsavel": "Grupo FIAP",
+        "fazenda": "FarmTech_Solution",
+        "cultura": "Café",
+        "area_plantio": {
+            "figura": "Retângulo",
+            "largura_m": 60.0,
+            "comprimento_m": 180.0,
+            "area_m2": 10800.0
+        },
+        "manejo_insumos": [
+            {
+                "produto": "Potásio",
+                "quantidade_ml_por_metro": 1.8,
+                "quantidade_ruas": 6,
+                "comprimento_cada_rua_m": 150.0,
+                "total_metros_aplicacao": 900.0,
+                "total_necessario_ml": 1620.0,
+                "total_necessario_litros": 1.62
+            }
+        ]
+    },
+    {
+        "responsavel": "Grupo FIAP",
+        "fazenda": "FamrTech_Solution",
+        "cultura": "Milho",
+        "area_plantio": {
+            "figura": "Triângulo",
+            "base_m": 75.0,
+            "altura_m": 150.0,
+            "area_m2": 5625.0
+        },
+        "manejo_insumos": [
+            {
+                "produto": "Fósforo",
+                "quantidade_ml_por_metro": 1.4,
+                "quantidade_ruas": 12,
+                "comprimento_cada_rua_m": 75.0,
+                "total_metros_aplicacao": 900.0,
+                "total_necessario_ml": 1260.0,
+                "total_necessario_litros": 1.26
+            }
+        ]
+    }
+]
