@@ -15,7 +15,8 @@
 - <a href="https://www.linkedin.com/in/jelielcardoso/">Jeliel Cardoso</a>
 - <a href="https://www.linkedin.com/in/deise-n%C3%B3brega-159429163/">Deise Nobrega</a>
 - <a href="https://www.linkedin.com/in/denispaulodiassilva/">Denis Paulo</a> 
-- <a href="https://www.linkedin.com/in/deweyne-reuel-0695522a8/">Deweyne Reuel</a> 
+- <a href="https://www.linkedin.com/in/deweyne-reuel-0695522a8/">Deweyne Reuel</a>
+- <a href="https://www.linkedin.com/in/mathnascimento/">Matheus Nascimento</a>
 - <a href="https://www.linkedin.com/company/inova-fusca">Nome do integrante 5</a>
 
 ## 👩‍🏫 Professores:
