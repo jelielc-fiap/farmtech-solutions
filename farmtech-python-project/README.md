@@ -50,8 +50,10 @@ O objetivo principal é demonstrar, de forma prática, como soluções tecnológ
 A estrutura do projeto é simples e contém apenas os arquivos essenciais:
 
 - <b>main.py</b>: Arquivo principal contendo toda a lógica da aplicação.
+- <b>estatisticas.R</b>: Arquivo .R contendo a parte das médias e desvio padrão.
 - <b>README.md</b>: Documento com descrição do projeto e instruções de uso.
 - <b>Dados cadastrados *.json</b>: Arquivos gerados automaticamente pelo sistema ao encerrar a aplicação, contendo os dados cadastrados.
+- <b>clima.R</b>: Arquivo da tarefa "Ir além" coleta de dados climáticos e exibição dos dados via texto simples no terminal.
 
 ## 🔧 Como executar o código
 
@@ -59,6 +61,7 @@ A estrutura do projeto é simples e contém apenas os arquivos essenciais:
 
 - Python 3.8 ou superior instalado
 - Terminal (CMD, PowerShell, Bash ou terminal do VSCode)
+- Rstudio instalado
 
 ### Verificar instalação do Python
 
@@ -98,6 +101,8 @@ Ao executar o programa, será exibido um menu interativo com as opções:
 - Exportação dos dados para arquivo JSON ao sair
 
 O arquivo JSON será gerado automaticamente na raiz do projeto com data e hora no nome.
+
+No Rstudio execute o arquivo estatisticas.R e também o arquivo clima.R.
 
 ## 🗃 Histórico de lançamentos
 
