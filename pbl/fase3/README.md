@@ -28,7 +28,7 @@ Repositorio organizado para a entrega da Fase 3, usando como base o arquivo `sen
 
 ## PBL - Project-Based Learning - FarmTech Solutions
 
-Esta secao documenta o fluxo seguido no Oracle SQL Developer para importar o arquivo `sensores_fase2.csv`.
+Esta secao documenta o fluxo seguido no Oracle SQL Developer para importar o arquivo `sensores_fase2.csv`. Video para visualização: https://www.youtube.com/watch?v=9s56B7KBjvg
 
 ### Base utilizada
 
@@ -149,6 +149,8 @@ O arquivo `app.py` implementa uma dashboard em Streamlit para visualizar:
 - status da irrigacao;
 - sugestoes de irrigacao com base na umidade e na probabilidade de chuva.
 
+Vídeo para visualização: https://www.youtube.com/watch?v=wtEEIiyrRas
+
 ### Como executar
 
 ```powershell
@@ -187,4 +189,6 @@ O notebook contem:
 - identificacao do perfil ideal de solo/clima para cafe, soja e milho;
 - treinamento de modelos preditivos;
 - avaliacao comparativa dos modelos.
+
+Video para visualização: https://www.youtube.com/watch?v=WMjajk5c3Dk
 
