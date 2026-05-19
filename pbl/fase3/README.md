@@ -1,4 +1,4 @@
-# PBL Fase 3 - Sensores Agricolas
+﻿# PBL Fase 3 - Sensores Agricolas
 
 Repositorio organizado para a entrega da Fase 3, usando como base o arquivo `sensores_fase2.csv` da Fase 2.
 
@@ -21,7 +21,7 @@ Repositorio organizado para a entrega da Fase 3, usando como base o arquivo `sen
 |   |-- 08_dashboard_grafico_niveis.png
 |   `-- 09_dashboard_dados_filtrados.png
 |-- notebooks/
-|   `-- SeuNome_RM572665_fase3_cap1.ipynb
+|   `-- Jeliel_RM572665_fase3_cap1.ipynb
 `-- sql/
     `-- consultas_oracle.sql
 ```
@@ -141,7 +141,7 @@ run_dashboard.bat
 
 Observacao: o arquivo `run_dashboard.bat` pressupoe que o ambiente `.venv` ja foi criado e que as dependencias ja foram instaladas.
 
-## Programa ir Além - Dashboard em Python
+## Programa ir AlÃ©m - Dashboard em Python
 
 O arquivo `app.py` implementa uma dashboard em Streamlit para visualizar:
 
@@ -175,11 +175,11 @@ run_dashboard.bat
 
 ![Tabela de dados filtrados](prints/09_dashboard_dados_filtrados.png)
 
-## Programa ir Além - Machine Learning no Agronegocio
+## Programa ir AlÃ©m - Machine Learning no Agronegocio
 
 A entrega da analise de Machine Learning esta em:
 
-- `notebooks/SeuNome_RM572665_fase3_cap1.ipynb`
+- `notebooks/Jeliel_RM572665_fase3_cap1.ipynb`
 
 O notebook contem:
 
@@ -187,3 +187,4 @@ O notebook contem:
 - identificacao do perfil ideal de solo/clima para cafe, soja e milho;
 - treinamento de modelos preditivos;
 - avaliacao comparativa dos modelos.
+
