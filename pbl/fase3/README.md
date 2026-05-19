@@ -21,7 +21,8 @@ Repositorio organizado para a entrega da Fase 3, usando como base o arquivo `sen
 |   |-- 08_dashboard_grafico_niveis.png
 |   `-- 09_dashboard_dados_filtrados.png
 |-- notebooks/
-|   `-- Jeliel_RM572665_fase3_cap1.ipynb
+|   |-- Jeliel_RM572665_fase3_cap1.ipynb
+|   `-- Jeliel_RM572665_fase3_cap1.html
 `-- sql/
     `-- consultas_oracle.sql
 ```
@@ -180,6 +181,7 @@ run_dashboard.bat
 A entrega da analise de Machine Learning esta em:
 
 - `notebooks/Jeliel_RM572665_fase3_cap1.ipynb`
+- `notebooks/Jeliel_RM572665_fase3_cap1.html`
 
 O notebook contem:
 
