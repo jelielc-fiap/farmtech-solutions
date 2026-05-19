@@ -81,6 +81,17 @@ O arquivo com as consultas esta em:
 
 ![Consulta realizada no Oracle](prints/06_consulta_select_resultado.png)
 
+## Dependencias
+
+As bibliotecas usadas estao em `requirements.txt`.
+
+Instalacao em um ambiente virtual:
+
+```powershell
+python -m venv .venv
+.venv\Scripts\python.exe -m pip install -r requirements.txt
+```
+
 ## Programa ir Além - Dashboard em Python
 
 O arquivo `app.py` implementa uma dashboard em Streamlit para visualizar:
@@ -127,14 +138,3 @@ O notebook contem:
 - identificacao do perfil ideal de solo/clima para cafe, soja e milho;
 - treinamento de modelos preditivos;
 - avaliacao comparativa dos modelos.
-
-## Dependencias
-
-As bibliotecas usadas estao em `requirements.txt`.
-
-Instalacao em um ambiente virtual:
-
-```powershell
-python -m venv .venv
-.venv\Scripts\python.exe -m pip install -r requirements.txt
-```
