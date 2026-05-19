@@ -85,12 +85,45 @@ O arquivo com as consultas esta em:
 
 As bibliotecas usadas estao em `requirements.txt`.
 
-Instalacao em um ambiente virtual:
+### Como executar em uma maquina nova
+
+Depois de clonar o repositorio, acesse a pasta da Fase 3:
+
+```powershell
+cd pbl\fase3
+```
+
+Crie o ambiente virtual do Python:
 
 ```powershell
 python -m venv .venv
+```
+
+Instale as dependencias do projeto:
+
+```powershell
 .venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
+
+Execute a dashboard:
+
+```powershell
+.venv\Scripts\streamlit.exe run app.py
+```
+
+Depois, abra no navegador o endereco exibido no terminal. Normalmente sera:
+
+```text
+http://localhost:8501
+```
+
+Tambem e possivel executar pelo arquivo:
+
+```text
+run_dashboard.bat
+```
+
+Observacao: o arquivo `run_dashboard.bat` pressupoe que o ambiente `.venv` ja foi criado e que as dependencias ja foram instaladas.
 
 ## Programa ir Além - Dashboard em Python
 
