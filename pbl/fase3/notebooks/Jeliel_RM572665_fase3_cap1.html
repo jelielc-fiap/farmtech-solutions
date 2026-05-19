@@ -7853,7 +7853,7 @@ a.anchor-link {
 
 <span class="n">DATA_PATH</span> <span class="o">=</span> <span class="s2">"sensores_fase2.csv"</span>
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">DATA_PATH</span><span class="p">)</span>
-<span class="n">df</span><span class="p">[</span><span class="s2">"Data"</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">"Data"</span><span class="p">])</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">"Data_Leitura"</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">"Data_Leitura"</span><span class="p">])</span>
 <span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
@@ -7885,7 +7885,7 @@ a.anchor-link {
 <thead>
 <tr style="text-align: right;">
 <th></th>
-<th>Data</th>
+<th>Data_Leitura</th>
 <th>Umidade</th>
 <th>pH</th>
 <th>N_ok</th>
@@ -7985,7 +7985,15 @@ a.anchor-link {
 <div class="cm-editor cm-s-jupyter">
 <div class="highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">"Dimensões da base:"</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
 <span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
-<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">info</span><span class="p">())</span>
+
+<span class="n">estrutura</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s2">"coluna"</span><span class="p">:</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">,</span>
+    <span class="s2">"tipo"</span><span class="p">:</span> <span class="n">df</span><span class="o">.</span><span class="n">dtypes</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+    <span class="s2">"nao_nulos"</span><span class="p">:</span> <span class="n">df</span><span class="o">.</span><span class="n">notna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+    <span class="s2">"nulos"</span><span class="p">:</span> <span class="n">df</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">values</span><span class="p">,</span>
+<span class="p">})</span>
+<span class="n">display</span><span class="p">(</span><span class="n">estrutura</span><span class="p">)</span>
+
 <span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">describe</span><span class="p">(</span><span class="n">include</span><span class="o">=</span><span class="s2">"all"</span><span class="p">))</span>
 <span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">isna</span><span class="p">()</span><span class="o">.</span><span class="n">sum</span><span class="p">()</span><span class="o">.</span><span class="n">to_frame</span><span class="p">(</span><span class="s2">"valores_nulos"</span><span class="p">))</span>
 <span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">"label"</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span><span class="o">.</span><span class="n">to_frame</span><span class="p">(</span><span class="s2">"quantidade"</span><span class="p">))</span>
@@ -8026,7 +8034,7 @@ a.anchor-link {
 <thead>
 <tr style="text-align: right;">
 <th></th>
-<th>Data</th>
+<th>Data_Leitura</th>
 <th>Umidade</th>
 <th>pH</th>
 <th>N_ok</th>
@@ -8105,30 +8113,98 @@ a.anchor-link {
 </div>
 <div class="jp-OutputArea-child">
 <div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>&lt;class 'pandas.core.frame.DataFrame'&gt;
-RangeIndex: 100 entries, 0 to 99
-Data columns (total 9 columns):
- #   Column               Non-Null Count  Dtype         
----  ------               --------------  -----         
- 0   Data                 100 non-null    datetime64[ns]
- 1   Umidade              100 non-null    float64       
- 2   pH                   100 non-null    float64       
- 3   N_ok                 100 non-null    int64         
- 4   P_ok                 100 non-null    int64         
- 5   K_ok                 100 non-null    int64         
- 6   Chuva_Probabilidade  100 non-null    int64         
- 7   Bomba_Ligada         100 non-null    int64         
- 8   label                100 non-null    object        
-dtypes: datetime64[ns](1), float64(2), int64(5), object(1)
-memory usage: 7.2+ KB
-</pre>
+<div class="jp-RenderedHTMLCommon jp-RenderedHTML jp-OutputArea-output" data-mime-type="text/html" tabindex="0">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+<thead>
+<tr style="text-align: right;">
+<th></th>
+<th>coluna</th>
+<th>tipo</th>
+<th>nao_nulos</th>
+<th>nulos</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<th>0</th>
+<td>Data_Leitura</td>
+<td>datetime64[ns]</td>
+<td>100</td>
+<td>0</td>
+</tr>
+<tr>
+<th>1</th>
+<td>Umidade</td>
+<td>float64</td>
+<td>100</td>
+<td>0</td>
+</tr>
+<tr>
+<th>2</th>
+<td>pH</td>
+<td>float64</td>
+<td>100</td>
+<td>0</td>
+</tr>
+<tr>
+<th>3</th>
+<td>N_ok</td>
+<td>int64</td>
+<td>100</td>
+<td>0</td>
+</tr>
+<tr>
+<th>4</th>
+<td>P_ok</td>
+<td>int64</td>
+<td>100</td>
+<td>0</td>
+</tr>
+<tr>
+<th>5</th>
+<td>K_ok</td>
+<td>int64</td>
+<td>100</td>
+<td>0</td>
+</tr>
+<tr>
+<th>6</th>
+<td>Chuva_Probabilidade</td>
+<td>int64</td>
+<td>100</td>
+<td>0</td>
+</tr>
+<tr>
+<th>7</th>
+<td>Bomba_Ligada</td>
+<td>int64</td>
+<td>100</td>
+<td>0</td>
+</tr>
+<tr>
+<th>8</th>
+<td>label</td>
+<td>object</td>
+<td>100</td>
+<td>0</td>
+</tr>
+</tbody>
+</table>
 </div>
-</div>
-<div class="jp-OutputArea-child">
-<div class="jp-OutputPrompt jp-OutputArea-prompt"></div>
-<div class="jp-RenderedText jp-OutputArea-output" data-mime-type="text/plain" tabindex="0">
-<pre>None</pre>
 </div>
 </div>
 <div class="jp-OutputArea-child">
@@ -8152,7 +8228,7 @@ memory usage: 7.2+ KB
 <thead>
 <tr style="text-align: right;">
 <th></th>
-<th>Data</th>
+<th>Data_Leitura</th>
 <th>Umidade</th>
 <th>pH</th>
 <th>N_ok</th>
@@ -8327,7 +8403,7 @@ memory usage: 7.2+ KB
 </thead>
 <tbody>
 <tr>
-<th>Data</th>
+<th>Data_Leitura</th>
 <td>0</td>
 </tr>
 <tr>
@@ -8465,8 +8541,8 @@ memory usage: 7.2+ KB
 
 <span class="n">df</span><span class="p">[</span><span class="s2">"Sugestao_Irrigacao"</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">sugestao_irrigacao</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">df</span><span class="p">[</span><span class="s2">"Nutrientes_Adequados"</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[[</span><span class="s2">"N_ok"</span><span class="p">,</span> <span class="s2">"P_ok"</span><span class="p">,</span> <span class="s2">"K_ok"</span><span class="p">]]</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">df</span><span class="p">[</span><span class="s2">"Mes"</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">"Data"</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span>
-<span class="n">df</span><span class="p">[[</span><span class="s2">"Data"</span><span class="p">,</span> <span class="s2">"Umidade"</span><span class="p">,</span> <span class="s2">"pH"</span><span class="p">,</span> <span class="s2">"Nutrientes_Adequados"</span><span class="p">,</span> <span class="s2">"Chuva_Probabilidade"</span><span class="p">,</span> <span class="s2">"Bomba_Ligada"</span><span class="p">,</span> <span class="s2">"label"</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">"Mes"</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">"Data_Leitura"</span><span class="p">]</span><span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">month</span>
+<span class="n">df</span><span class="p">[[</span><span class="s2">"Data_Leitura"</span><span class="p">,</span> <span class="s2">"Umidade"</span><span class="p">,</span> <span class="s2">"pH"</span><span class="p">,</span> <span class="s2">"Nutrientes_Adequados"</span><span class="p">,</span> <span class="s2">"Chuva_Probabilidade"</span><span class="p">,</span> <span class="s2">"Bomba_Ligada"</span><span class="p">,</span> <span class="s2">"label"</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
@@ -8497,7 +8573,7 @@ memory usage: 7.2+ KB
 <thead>
 <tr style="text-align: right;">
 <th></th>
-<th>Data</th>
+<th>Data_Leitura</th>
 <th>Umidade</th>
 <th>pH</th>
 <th>Nutrientes_Adequados</th>
