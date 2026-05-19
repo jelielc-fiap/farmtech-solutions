@@ -101,14 +101,30 @@ python -m venv .venv
 
 Instale as dependencias do projeto:
 
+No PowerShell:
+
 ```powershell
 .venv\Scripts\python.exe -m pip install -r requirements.txt
 ```
 
+No Git Bash:
+
+```bash
+.venv/Scripts/python.exe -m pip install -r requirements.txt
+```
+
 Execute a dashboard:
+
+No PowerShell:
 
 ```powershell
 .venv\Scripts\streamlit.exe run app.py
+```
+
+No Git Bash:
+
+```bash
+.venv/Scripts/streamlit.exe run app.py
 ```
 
 Depois, abra no navegador o endereco exibido no terminal. Normalmente sera:
