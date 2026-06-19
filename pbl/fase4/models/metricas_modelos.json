@@ -1,0 +1,129 @@
+{
+    "gerado_em": "2026-06-19T17:13:02",
+    "features": [
+        "umidade",
+        "ph",
+        "n_ok",
+        "p_ok",
+        "k_ok",
+        "chuva_probabilidade",
+        "bomba_ligada",
+        "cultura"
+    ],
+    "targets": {
+        "rendimento_estimado_t_ha": "Rendimento estimado (t/ha)",
+        "volume_irrigacao_l": "Volume de irrigacao (L/ha)",
+        "necessidade_fertilizacao_kg_ha": "Necessidade de fertilizacao (kg/ha)",
+        "umidade_futura": "Umidade futura (%)",
+        "ph_futuro": "pH futuro"
+    },
+    "melhores_modelos": {
+        "rendimento_estimado_t_ha": "Gradient Boosting",
+        "volume_irrigacao_l": "Gradient Boosting",
+        "necessidade_fertilizacao_kg_ha": "Gradient Boosting",
+        "umidade_futura": "Regressao Linear",
+        "ph_futuro": "Regressao Linear"
+    },
+    "metricas": {
+        "rendimento_estimado_t_ha": {
+            "Regressao Linear": {
+                "MAE": 0.19747468267184076,
+                "MSE": 0.08150461064124376,
+                "RMSE": 0.285490123544132,
+                "R2": 0.7243405291562776
+            },
+            "Random Forest": {
+                "MAE": 0.2220875325577201,
+                "MSE": 0.08274904773603269,
+                "RMSE": 0.2876613420952365,
+                "R2": 0.7201316768183679
+            },
+            "Gradient Boosting": {
+                "MAE": 0.18202996290742499,
+                "MSE": 0.057487349515392895,
+                "RMSE": 0.23976519663077228,
+                "R2": 0.8055701116422203
+            }
+        },
+        "volume_irrigacao_l": {
+            "Regressao Linear": {
+                "MAE": 189.67967941472173,
+                "MSE": 59685.04309186063,
+                "RMSE": 244.30522526516012,
+                "R2": 0.8303426473887909
+            },
+            "Random Forest": {
+                "MAE": 49.33062679681425,
+                "MSE": 4522.468275245545,
+                "RMSE": 67.24929944055584,
+                "R2": 0.9871446855845367
+            },
+            "Gradient Boosting": {
+                "MAE": 35.33550019678765,
+                "MSE": 2787.1186070457416,
+                "RMSE": 52.793168185341386,
+                "R2": 0.9920774931240804
+            }
+        },
+        "necessidade_fertilizacao_kg_ha": {
+            "Regressao Linear": {
+                "MAE": 1.2973893020502816,
+                "MSE": 2.6336088555530126,
+                "RMSE": 1.6228397504230085,
+                "R2": 0.9930449857852468
+            },
+            "Random Forest": {
+                "MAE": 3.2177769491342008,
+                "MSE": 38.46824514105769,
+                "RMSE": 6.202277415680284,
+                "R2": 0.8984104297764115
+            },
+            "Gradient Boosting": {
+                "MAE": 0.330803420922677,
+                "MSE": 0.4317576640603286,
+                "RMSE": 0.6570826919500533,
+                "R2": 0.9988597848596474
+            }
+        },
+        "umidade_futura": {
+            "Regressao Linear": {
+                "MAE": 0.42874730870456573,
+                "MSE": 0.23066163001741327,
+                "RMSE": 0.48027245394402257,
+                "R2": 0.9975043728884
+            },
+            "Random Forest": {
+                "MAE": 2.113859689095624,
+                "MSE": 6.340288309699901,
+                "RMSE": 2.517992912956647,
+                "R2": 0.9314017012718898
+            },
+            "Gradient Boosting": {
+                "MAE": 1.4324707890781274,
+                "MSE": 3.0648312917623137,
+                "RMSE": 1.7506659566468739,
+                "R2": 0.966840275672965
+            }
+        },
+        "ph_futuro": {
+            "Regressao Linear": {
+                "MAE": 0.03576443993359781,
+                "MSE": 0.0016917471028898789,
+                "RMSE": 0.04113085341796203,
+                "R2": 0.9885190082055901
+            },
+            "Random Forest": {
+                "MAE": 0.049828472721723395,
+                "MSE": 0.004564985468119227,
+                "RMSE": 0.06756467618600141,
+                "R2": 0.969019860822254
+            },
+            "Gradient Boosting": {
+                "MAE": 0.05713596398662112,
+                "MSE": 0.004519350917037316,
+                "RMSE": 0.0672261178191729,
+                "R2": 0.9693295583566065
+            }
+        }
+    }
+}
