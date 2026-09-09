@@ -1,0 +1,3 @@
+regiao,codigo,instancia,vcpu,memoria_gib,rede,ec2_usd_hora,ebs_magnetico_usd_gb_mes,fonte,horas_mes,armazenamento_gb,custo_ec2_mes_usd,custo_ebs_mes_usd,custo_total_mes_usd,diferenca_vs_menor_usd
+Norte da Virgínia,us-east-1,t3.micro,2,1,Até 5 Gigabit,0.0104,0.05,AWS Pricing Calculator; capturas fornecidas pelo aluno,730,50,7.592,2.5,10.091999999999999,0.0
+São Paulo,sa-east-1,t3.micro,2,1,Até 5 Gigabit,0.0168,0.12,AWS Pricing Calculator; capturas fornecidas pelo aluno,730,50,12.264,6.0,18.264,8.172

@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd
+data/*.db
+.streamlit/secrets.toml
+arduino/farmtech_esp32_iot/config.h

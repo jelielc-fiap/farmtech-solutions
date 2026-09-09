@@ -1,0 +1,84 @@
+{
+  "linhas_analisadas": 156,
+  "culturas": [
+    "Cocoa, beans",
+    "Oil palm fruit",
+    "Rice, paddy",
+    "Rubber, natural"
+  ],
+  "origem_dataset": {
+    "tipo": "portal_fiap",
+    "descricao": "Arquivo baixado do portal FIAP e fornecido pelo aluno",
+    "arquivo_original": "crop_yield.csv",
+    "importado_em_utc": "2026-09-09T00:40:54.388487+00:00",
+    "sha256": "07b3335f497e08e705b5835ee334426ac16cb24732c1bfaa994254d39f771b1b",
+    "linhas_originais": 156,
+    "linhas_validas_unicas": 156
+  },
+  "qualidade_dados": {
+    "linhas_originais": 156,
+    "linhas_invalidas_removidas": 0,
+    "duplicatas_removidas": 0,
+    "linhas_analisadas": 156,
+    "ausentes_originais": {
+      "Crop": 0,
+      "Precipitation (mm day-1)": 0,
+      "Specific Humidity at 2 Meters (g/kg)": 0,
+      "Relative Humidity at 2 Meters (%)": 0,
+      "Temperature at 2 Meters (C)": 0,
+      "Yield": 0
+    },
+    "mapeamento_colunas": {
+      "Crop": "cultura",
+      "Precipitation (mm day-1)": "precipitacao_mm_dia",
+      "Specific Humidity at 2 Meters (g/kg)": "umidade_especifica_2m_g_kg",
+      "Relative Humidity at 2 Meters (%)": "umidade_relativa_2m_pct",
+      "Temperature at 2 Meters (C)": "temperatura_2m_c",
+      "Yield": "rendimento_t_ha"
+    },
+    "sha256": "07b3335f497e08e705b5835ee334426ac16cb24732c1bfaa994254d39f771b1b"
+  },
+  "unidade_resultados": "unidade original de Yield",
+  "nota_unidades": "O enunciado declara t/ha, mas Yield chega a valores muito elevados e precipitação está na casa dos milhares. Mantidos os valores originais, sem conversão arbitrária; escala e periodicidade precisam de confirmação na fonte.",
+  "melhor_modelo": "Extra Trees",
+  "metricas_melhor_modelo": {
+    "MAE": 3863.3939396441265,
+    "MSE": 39289000.77328188,
+    "RMSE": 6268.09387080968,
+    "R2": 0.992423842718992,
+    "CV_RMSE_medio": 7583.296063632233
+  },
+  "avaliacao": {
+    "criterio_selecao": "Menor RMSE médio na validação cruzada agrupada, somente no treino",
+    "folds": 5,
+    "linhas_treino": 120,
+    "linhas_teste": 36,
+    "grupos_treino": 30,
+    "grupos_teste": 9,
+    "grupos_em_comum": 0,
+    "baseline_teste": {
+      "MAE": 4554.163888888887,
+      "MSE": 49639773.00675922,
+      "RMSE": 7045.549872562057,
+      "R2": 0.9904278876965359
+    },
+    "culturas_ausentes_no_treino": []
+  },
+  "quantidade_modelos": 5,
+  "melhor_k_clusters": 3,
+  "silhouette_scores": {
+    "2": 0.3152531494555132,
+    "3": 0.32643780662434674,
+    "4": 0.3068298389791961,
+    "5": 0.28504827492649587,
+    "6": 0.27126707687512364
+  },
+  "pca_variancia_explicada": 0.7868566383957836,
+  "outliers_detectados": 8,
+  "achados": [
+    "O modelo Extra Trees foi escolhido pela validação cruzada do treino, antes de consultar o teste.",
+    "Os grupos foram formados sem usar Yield; as tabelas detalham composição e rendimento por cultura.",
+    "Outliers são candidatos a investigação, com contamination fixada em 5%; não foram removidos do treinamento.",
+    "O R² global deve ser confrontado com a média por cultura e com erros separados por cultura."
+  ]
+}

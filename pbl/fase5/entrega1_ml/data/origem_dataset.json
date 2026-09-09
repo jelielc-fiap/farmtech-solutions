@@ -1,0 +1,9 @@
+{
+  "tipo": "portal_fiap",
+  "descricao": "Arquivo baixado do portal FIAP e fornecido pelo aluno",
+  "arquivo_original": "crop_yield.csv",
+  "importado_em_utc": "2026-09-09T00:40:54.388487+00:00",
+  "sha256": "07b3335f497e08e705b5835ee334426ac16cb24732c1bfaa994254d39f771b1b",
+  "linhas_originais": 156,
+  "linhas_validas_unicas": 156
+}

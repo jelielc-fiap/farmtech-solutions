@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="650" viewBox="0 0 1200 650">
+<rect width="1200" height="650" fill="#f5f8fb"/>
+<style>text{font-family:Arial,sans-serif;fill:#17324d;font-size:21px}.title{font-size:30px;font-weight:bold}.box{fill:white;stroke:#287b79;stroke-width:2}.small{font-size:17px}.arrow{fill:none;stroke:#287b79;stroke-width:3;marker-end:url(#tip)}</style>
+<defs><marker id="tip" markerWidth="10" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 Z" fill="#287b79"/></marker></defs>
+<text x="45" y="55" class="title">FarmTech Solutions — Arquitetura</text>
+<rect x="40" y="140" width="260" height="95" rx="12" class="box"/><text x="60" y="176">DHT22</text><text x="60" y="208" class="small">Temperatura e umidade do ar</text>
+<rect x="40" y="310" width="260" height="95" rx="12" class="box"/><text x="60" y="346">Sensor resistivo de solo</text><text x="60" y="378" class="small">Umidade do solo · saída AO</text>
+<rect x="380" y="220" width="180" height="100" rx="12" class="box"/><text x="420" y="260">ESP32</text><text x="405" y="292" class="small">Coleta a cada 10 s</text>
+<path d="M300 188 H340 V245 H380" class="arrow"/><text x="305" y="160" class="small">GPIO 27</text>
+<path d="M300 357 H340 V295 H380" class="arrow"/><text x="305" y="394" class="small">GPIO 34</text>
+<rect x="710" y="220" width="230" height="100" rx="12" class="box"/><text x="738" y="260">Servidor Flask</text><text x="742" y="292" class="small">PC local · porta 5000</text>
+<path d="M560 270 H710" class="arrow"/><text x="582" y="210" class="small">Wi-Fi</text><text x="575" y="238" class="small">HTTP POST JSON</text>
+<rect x="710" y="420" width="230" height="85" rx="12" class="box"/><text x="742" y="455">SQLite</text><text x="729" y="485" class="small">leituras_esp32.db</text>
+<path d="M825 320 V420" class="arrow"/><text x="839" y="377" class="small">Grava registros</text>
+<rect x="350" y="420" width="270" height="85" rx="12" class="box"/><text x="375" y="455">Dashboard Streamlit</text><text x="375" y="485" class="small">localhost:8502 · histórico</text>
+<path d="M710 463 H620" class="arrow"/>
+<rect x="710" y="100" width="230" height="75" rx="12" class="box"/><text x="746" y="133">Página HTML</text><text x="741" y="159" class="small">localhost:5000</text><path d="M825 220 V175" class="arrow"/>
+<text x="45" y="592" class="small">Sensores → ESP32 → Wi-Fi → servidor → armazenamento → visualização</text>
+</svg>
